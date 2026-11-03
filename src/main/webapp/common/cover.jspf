@@ -1,0 +1,18 @@
+<%-- 陪玩助手：根据 ${p.gameName} 计算封面图路径，结果存入 ${cover} --%>
+<c:set var="g" value="${fn:toLowerCase(p.gameName)}"/>
+<c:set var="cover" value="${pageContext.request.contextPath}/images/hero.jpg"/>
+<c:if test="${fn:contains(g,'王者') or fn:contains(g,'英雄联盟') or fn:contains(g,'moba') or fn:contains(g,'平安京') or fn:contains(g,'梦三国')}">
+    <c:set var="cover" value="${pageContext.request.contextPath}/images/game-moba.png"/>
+</c:if>
+<c:if test="${fn:contains(g,'和平') or fn:contains(g,'绝地') or fn:contains(g,'吃鸡') or fn:contains(g,'cs') or fn:contains(g,'无畏') or fn:contains(g,'暗区') or fn:contains(g,'三角洲')}">
+    <c:set var="cover" value="${pageContext.request.contextPath}/images/esports-stage.jpg"/>
+</c:if>
+<c:if test="${fn:contains(g,'原神') or fn:contains(g,'崩坏') or fn:contains(g,'二次元') or fn:contains(g,'魔兽') or fn:contains(g,'剑网')}">
+    <c:set var="cover" value="${pageContext.request.contextPath}/images/setup.jpg"/>
+</c:if>
+<c:if test="${fn:contains(g,'永劫') or fn:contains(g,'动作') or fn:contains(g,'格斗') or fn:contains(g,'街霸')}">
+    <c:set var="cover" value="${pageContext.request.contextPath}/images/keyboard.jpg"/>
+</c:if>
+<c:if test="${fn:contains(g,'休闲') or fn:contains(g,'街机') or fn:contains(g,'棋牌') or fn:contains(g,'飞车') or fn:contains(g,'nba') or fn:contains(g,'fifa')}">
+    <c:set var="cover" value="${pageContext.request.contextPath}/images/retro.jpg"/>
+</c:if>

@@ -1,0 +1,5 @@
+# 数据库配置模板：复制本文件为 db.properties 后填写自己的信息
+# db.properties 含明文密码，已被 .gitignore 排除，不会提交到仓库
+db.url=jdbc:mysql://localhost:3306/gameplayorder?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+db.username=root
+db.password=你的数据库密码
