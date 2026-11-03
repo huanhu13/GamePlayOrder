@@ -76,6 +76,9 @@
         </div>
     </div>
 
+    <c:if test="${not empty msg}">
+        <div class="msg">${msg}</div>
+    </c:if>
     <c:if test="${not empty sessionScope.msg}">
         <div class="msg">${sessionScope.msg}</div>
         <c:remove var="msg" scope="session"/>

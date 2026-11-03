@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("loginUser", user);
             // 消除过滤器留下的提示信息，避免重复显示
             session.removeAttribute("msg");
-            resp.sendRedirect(req.getContextPath() + "/index.jsp");
+            resp.sendRedirect(req.getContextPath() + "/home");
         } catch (Exception e) {
             // 登录失败：回显错误信息
             req.setAttribute("msg", e.getMessage());

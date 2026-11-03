@@ -16,6 +16,11 @@
 
 ## 功能一览
 
+**全站**
+- 首页：轮播 Banner、游戏分类宫格、评分最高的大神推荐、人气榜、平台数据
+- 陪玩大厅：按游戏筛选、按价格/评分排序、在线与认证标识、语音波动效
+- 订单列表：卡片 + 状态进度条，操作按钮随状态变化
+
 **普通用户（role=0）**
 - 注册 / 登录 / 退出
 - 浏览陪玩大厅（封面卡片、评分、价格）
@@ -50,7 +55,7 @@ GamePlayOrder/
 │  │  ├─ entity/                  # User、Playmate、Orders、Review、Settlement
 │  │  ├─ dao/                     # 5 个 DAO，纯 JDBC
 │  │  ├─ service/                 # 业务逻辑与事务控制
-│  │  ├─ servlet/                 # 11 个 Servlet（@WebServlet 注解注册）
+│  │  ├─ servlet/                 # 12 个 Servlet（@WebServlet 注解注册，含首页 HomeServlet）
 │  │  ├─ filter/                  # EncodingFilter、LoginFilter
 │  │  └─ util/                    # DBUtil、MD5Util
 │  ├─ resources/
@@ -59,6 +64,8 @@ GamePlayOrder/
 │  └─ webapp/
 │     ├─ *.jsp                    # 12 个页面
 │     ├─ common/nav.jsp           # 公共导航
+│     ├─ common/cover.jspf        # 游戏封面映射片段
+│     ├─ js/app.js                # 轮播 / 筛选 / 排序（原生 JS）
 │     ├─ css/style.css
 │     ├─ images/                  # 电竞配图（Unsplash 免费可商用 + AI 生成）
 │     └─ WEB-INF/web.xml

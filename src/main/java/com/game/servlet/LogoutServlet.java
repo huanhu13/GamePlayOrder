@@ -18,6 +18,6 @@ public class LogoutServlet extends HttpServlet {
             throws ServletException, IOException {
         // 销毁会话
         req.getSession().invalidate();
-        resp.sendRedirect(req.getContextPath() + "/login.jsp");
+        resp.sendRedirect(req.getContextPath() + "/home");
     }
 }
